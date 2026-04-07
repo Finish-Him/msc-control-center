@@ -1,0 +1,42 @@
+services:
+  app:
+    build: .
+    image: msc-control-center:latest
+    container_name: msc-control-center
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://msc:${POSTGRES_PASSWORD:-change_me}@postgres:5432/msc_control
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - msc-net
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: msc-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: msc_control
+      POSTGRES_USER: msc
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U msc -d msc_control"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - msc-net
+
+volumes:
+  pgdata:
+
+networks:
+  msc-net:
+    driver: bridge

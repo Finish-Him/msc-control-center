@@ -1,0 +1,24 @@
+.env
+.env.local
+*.local
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Editor
+.vscode/
+
+# TypeScript
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Local databases
+*.db
+*.sqlite
