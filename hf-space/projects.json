@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "total": 28,
+    "atualizado": "2026-04-17T03:30-03:00",
+    "autor": "Moises Costa",
+    "categorias": 6
+  },
+  "projetos": [
+    {
+      "nome": "agents-msc",
+      "categoria": "MSC Consultoria",
+      "descricao": "Equipe de agentes IA — automacao interna. V1: Recepcionista-Qualificador BANT com human-in-the-loop",
+      "stack": "Python, LangGraph, LangChain, LangSmith",
+      "status": "Em desenvolvimento",
+      "github": "local",
+      "porta": null
+    },
+    {
+      "nome": "claira",
+      "categoria": "MSC Consultoria",
+      "descricao": "Sistema operacional para escritorios de advocacia (Voz, CRM, Calendario, IA)",
+      "stack": "Monorepo (React, Supabase, Skills)",
+      "status": "Ativo (Fase 1-2)",
+      "github": "https://github.com/Msc-Consultoriarj-org/claira",
+      "porta": null
+    },
+    {
+      "nome": "msc",
+      "categoria": "MSC Consultoria",
+      "descricao": "Pesquisa Global — plataforma unificada de inteligencia de mercado. Mono-repo multi-servico",
+      "stack": "Node.js, Python, React, Next.js",
+      "status": "Ativo",
+      "github": "https://github.com/Finish-Him/MSC",
+      "porta": null
+    },
+    {
+      "nome": "msc-control-center",
+      "categoria": "MSC Consultoria",
+      "descricao": "Hub central — integracoes, monitoramento, automacao, dev logs",
+      "stack": "React, Express, Drizzle, PostgreSQL, Gradio",
+      "status": "Ativo",
+      "github": "https://github.com/Finish-Him/msc-control-center",
+      "porta": 3000
+    },
+    {
+      "nome": "msc-marketing-agents",
+      "categoria": "MSC Consultoria",
+      "descricao": "Equipe de agentes de marketing — Blog, Estrategia, Trafego, SDR, SEO",
+      "stack": "Python, LangGraph, LangChain",
+      "status": "Redator ativo",
+      "github": "local",
+      "porta": null
+    },
+    {
+      "nome": "arquimedes",
+      "categoria": "Educacao e Entrevistas",
+      "descricao": "Plataforma LMS completa — 5 alunos, 40+ modulos, exercicios, anotacoes, gamificacao",
+      "stack": "Next.js, React, TypeScript, tRPC, Drizzle ORM",
+      "status": "v2.6 (85%)",
+      "github": "https://github.com/Msc-Consultoriarj-org/arquimedes-v.0.2.0",
+      "porta": 3000
+    },
+    {
+      "nome": "concurso-hub",
+      "categoria": "Educacao e Entrevistas",
+      "descricao": "Hub de editais de concursos publicos + parsing com IA multi-provider",
+      "stack": "Next.js 16, TypeScript, Tailwind, AI",
+      "status": "Ativo",
+      "github": "https://github.com/Msc-Consultoriarj-org/concurso-hub",
+      "porta": 3000
+    },
+    {
+      "nome": "edustream",
+      "categoria": "Educacao e Entrevistas",
+      "descricao": "Plataforma educacional de podcasts impulsionada por IA",
+      "stack": "Node.js, React, Express, TypeScript",
+      "status": "Ativo",
+      "github": "local",
+      "porta": null
+    },
+    {
+      "nome": "freecodecamp-auto",
+      "categoria": "Educacao e Entrevistas",
+      "descricao": "Automacao Playwright + Claude API para Python Cert v9 (freeCodeCamp)",
+      "stack": "Python, Playwright, Anthropic API",
+      "status": "Ativo",
+      "github": "local",
+      "porta": null
+    },
+    {
+      "nome": "interview-coach",
+      "categoria": "Educacao e Entrevistas",
+      "descricao": "English Interview Coach — agente LangGraph para devs brasileiros",
+      "stack": "Python, LangGraph, OpenAI, Rich",
+      "status": "Ativo",
+      "github": "local",
+      "porta": null
+    },
+    {
+      "nome": "job-interview",
+      "categoria": "Educacao e Entrevistas",
+      "descricao": "Preparacao Python Jr→Sr para entrevistas internacionais — 8 semanas",
+      "stack": "Python, FastAPI, Django, Pytest",
+      "status": "Ativo (estudo)",
+      "github": "local",
+      "porta": null
+    },
+    {
+      "nome": "telecom-ai-platform",
+      "categoria": "Educacao e Entrevistas",
+      "descricao": "Plataforma didatica IA para telecomunicacoes — FastAPI + LangGraph + MCP",
+      "stack": "Python, FastAPI, LangGraph, MCP",
+      "status": "Didatico/Showcase",
+      "github": "https://github.com/Finish-Him/telecom-ai-platform",
+      "porta": 8000
+    },
+    {
+      "nome": "dota2-betting-agent",
+      "categoria": "Gaming e ML",
+      "descricao": "Sistema de predicao multi-modelo ensemble para apostas esports Dota 2",
+      "stack": "Node.js, FastAPI, React, Playwright, Prisma, PostgreSQL",
+      "status": "v3.0 Ativo",
+      "github": "local",
+      "porta": 3000
+    },
+    {
+      "nome": "dota2-edge",
+      "categoria": "Gaming e ML",
+      "descricao": "Previsao de partidas pro Dota 2 — 1.645 partidas, acuracia 57-89%",
+      "stack": "Python, Pandas, OpenDota API",
+      "status": "Ativo",
+      "github": "https://github.com/Finish-Him/dota2",
+      "porta": null
+    },
+    {
+      "nome": "polymarket-sdk",
+      "categoria": "Gaming e ML",
+      "descricao": "SDK para Polymarket proxy wallet",
+      "stack": "JavaScript, TypeScript, Node.js",
+      "status": "Referencia (fork)",
+      "github": "https://github.com/Finish-Him/polymarket-sdk",
+      "porta": null
+    },
+    {
+      "nome": "prometheus",
+      "categoria": "Gaming e ML",
+      "descricao": "Analise e previsao Dota 2 Pro — DreamLeague S27. Multi-AI",
+      "stack": "Python, Streamlit, Pandas, Supabase",
+      "status": "v7.3 Ativo",
+      "github": "https://github.com/Finish-Him/prometheus-v7.1",
+      "porta": 8501
+    },
+    {
+      "nome": "detran-contratos",
+      "categoria": "DETRAN",
+      "descricao": "Gestao de contratos, convenios, termos de cooperacao e VPN do Detran-RJ",
+      "stack": "Next.js, React, TypeScript, tRPC, Drizzle, MySQL",
+      "status": "v1.5.0 Ativo",
+      "github": "https://github.com/Msc-Consultoriarj-org/detran-contratos",
+      "porta": 3000
+    },
+    {
+      "nome": "patrimonio-detran",
+      "categoria": "DETRAN",
+      "descricao": "Gestao de patrimonio DTIC Detran-RJ — CRUD, dashboard, upload S3",
+      "stack": "Node.js, React, TypeScript, Express, Drizzle",
+      "status": "Ativo",
+      "github": "https://github.com/Msc-Consultoriarj-org/patrimonio-detran-rj-manus",
+      "porta": 3000
+    },
+    {
+      "nome": "cli-anything",
+      "categoria": "Dev Tools",
+      "descricao": "Framework que torna qualquer software agent-native — CLI para agentes",
+      "stack": "Python, Click",
+      "status": "Ativo (open source)",
+      "github": "https://github.com/Finish-Him/CLI-Anything",
+      "porta": null
+    },
+    {
+      "nome": "claude-code-transcripts",
+      "categoria": "Dev Tools",
+      "descricao": "Extrair e formatar transcripts de sessoes Claude Code",
+      "stack": "Python",
+      "status": "Referencia (fork)",
+      "github": "https://github.com/Finish-Him/claude-code-transcripts",
+      "porta": null
+    },
+    {
+      "nome": "github-dashboard",
+      "categoria": "Dev Tools",
+      "descricao": "Dashboard para analise de repositorios GitHub",
+      "stack": "Node.js, React, TypeScript, Express, Drizzle",
+      "status": "Ativo",
+      "github": "local",
+      "porta": 3000
+    },
+    {
+      "nome": "skills",
+      "categoria": "Dev Tools",
+      "descricao": "Repositorio de skills Anthropic — instrucoes e recursos para Claude",
+      "stack": "Markdown, SKILL.md",
+      "status": "Ativo (open source)",
+      "github": "https://github.com/Finish-Him/skills",
+      "porta": null
+    },
+    {
+      "nome": "superpowers",
+      "categoria": "Dev Tools",
+      "descricao": "Workflow para coding agents com skills compostas e planos de implementacao",
+      "stack": "JavaScript, OpenCode plugin",
+      "status": "v5.0.4 Ativo",
+      "github": "https://github.com/Finish-Him/superpowers",
+      "porta": null
+    },
+    {
+      "nome": "wave2md",
+      "categoria": "Dev Tools",
+      "descricao": "Converter audio/video em Markdown estruturado",
+      "stack": "Node.js, React, TypeScript, Express, Drizzle",
+      "status": "v1.0.0 Ativo",
+      "github": "https://github.com/Finish-Him/wave2md",
+      "porta": 3000
+    },
+    {
+      "nome": "youtube-summarizer",
+      "categoria": "Dev Tools",
+      "descricao": "Resumidor de videos YouTube com IA — DeepSeek V3, Gemini, Groq, GPT-4o-mini",
+      "stack": "Next.js 15, React 19, Prisma, SQLite",
+      "status": "Ativo",
+      "github": "https://github.com/Finish-Him/youtube_summarizer",
+      "porta": 3000
+    },
+    {
+      "nome": "festeja-kids",
+      "categoria": "Eventos",
+      "descricao": "Gestao de salao de festas v1.0",
+      "stack": "React, Node.js, Express, SQLite/MySQL",
+      "status": "Ativo",
+      "github": "https://github.com/Msc-Consultoriarj-org/Festeja-kids",
+      "porta": 5000
+    },
+    {
+      "nome": "festeja-kids-2",
+      "categoria": "Eventos",
+      "descricao": "Gestao de festas infantis v2.0 — visitacoes, contratos, pagamentos, relatorios",
+      "stack": "Node.js, React, TypeScript, Express, Drizzle",
+      "status": "69% (em desenvolvimento)",
+      "github": "https://github.com/Finish-Him/festeja-kids-2",
+      "porta": 3000
+    },
+    {
+      "nome": "recanto-delivery",
+      "categoria": "Eventos",
+      "descricao": "Delivery para Recanto do Acai — cardapio, pedidos, admin, rastreamento",
+      "stack": "Node.js, React, TypeScript, Express, tRPC, Drizzle",
+      "status": "v1.0.0 Ativo",
+      "github": "https://github.com/Finish-Him/recanto-delivery",
+      "porta": 3000
+    }
+  ]
+}

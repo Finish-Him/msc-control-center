@@ -12,6 +12,7 @@ ehthumbs.db
 
 # Editor
 .vscode/
+.idea/
 
 # TypeScript
 *.tsbuildinfo
@@ -22,3 +23,15 @@ coverage/
 # Local databases
 *.db
 *.sqlite
+
+# Python (HF Space)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Docker
+.docker/
+
+# Build
+.next/

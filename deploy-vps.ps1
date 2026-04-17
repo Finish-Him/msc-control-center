@@ -9,6 +9,7 @@ $VPS_USER   = "root"
 $SSH_KEY    = "$env:USERPROFILE\.ssh\id_ed25519"
 $DEPLOY_DIR = "/opt/msc-control-center"
 $PM2_NAME   = "msc-control-center"
+$APP_PORT   = "3002"
 
 $SSH_OPTS = @("-o", "BatchMode=yes", "-o", "StrictHostKeyChecking=yes", "-i", $SSH_KEY)
 
@@ -46,9 +47,10 @@ $envLines = Get-Content $localEnvPath | ForEach-Object {
     $_ -replace "@localhost:", "@127.0.0.1:"
 }
 # Override/add production settings
-$envLines = $envLines | Where-Object { $_ -notmatch "^NODE_ENV=" -and $_ -notmatch "^LOCAL_PROJECTS_PATH=" }
+$envLines = $envLines | Where-Object { $_ -notmatch "^NODE_ENV=" -and $_ -notmatch "^LOCAL_PROJECTS_PATH=" -and $_ -notmatch "^PORT=" }
 $envLines += "NODE_ENV=production"
 $envLines += "LOCAL_PROJECTS_PATH=/opt/projects"
+$envLines += "PORT=$APP_PORT"
 
 $envContent = $envLines -join "`n"
 $envContent | & ssh @SSH_OPTS "${VPS_USER}@${VPS_HOST}" "cat > $DEPLOY_DIR/.env"
@@ -63,10 +65,10 @@ Write-Host "Build complete"
 
 # ── 5. PM2 start/restart ─────────────────────────────────────────────────────
 Write-Host "`n[5/5] Starting with PM2..." -ForegroundColor Yellow
-Remote "pm2 describe $PM2_NAME > /dev/null 2>&1 && pm2 restart $PM2_NAME || pm2 start $DEPLOY_DIR/dist/index.js --name $PM2_NAME"
+Remote "pm2 describe $PM2_NAME > /dev/null 2>&1 && pm2 restart $PM2_NAME || pm2 start $DEPLOY_DIR/dist/index.js --name $PM2_NAME --cwd $DEPLOY_DIR"
 Remote "pm2 save"
 
 Write-Host "`n=== Deploy complete ===" -ForegroundColor Green
-Write-Host "App URL:   http://${VPS_HOST}:3001" -ForegroundColor White
+Write-Host "App URL:   http://${VPS_HOST}:$APP_PORT" -ForegroundColor White
 Write-Host "PM2 logs:  ssh root@${VPS_HOST} pm2 logs $PM2_NAME" -ForegroundColor White
 Write-Host "PM2 mon:   ssh root@${VPS_HOST} pm2 monit" -ForegroundColor White
